@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wick & Essence Fun App</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #F5F1E8;
+      color: #2E2E2E;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #00274C; /* BYU blue */
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+      background-color: #00274C; /* BYU blue */
+      color: white;
+    }
+    #riddle {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+    #answer {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Wick & Essence Riddle Lab</h1>
+<p>Test your BYU Provo knowledge! 🏔️</p>
+
+<button onclick="newRiddle()">New Riddle</button>
+<button onclick="showAnswer()">Show Answer</button>
+
+<div id="riddle">Click "New Riddle" to get started!</div>
+<div id="answer"></div>
+
+<script>
+  const riddles = [
+    {q: "I’m the iconic mountain on campus, visible from almost everywhere. What am I?", a: "Y Mountain"},
+    {q: "I’m built for students to run, walk, and relax. On game days, I fill with cheering fans. What am I?", a: "LaVell Edwards Stadium"},
+    {q: "I hold thousands of books, but I’m not a person. Students study here every day. What am I?", a: "The Harold B. Lee Library"},
+    {q: "I mark the center of campus with a fountain and a plaza. Students meet here often. What am I?", a: "The Reflection Pool / Marriott Center Plaza"},
+    {q: "I shine high on the mountainside with a giant white letter. What am I?", a: "The giant 'Y' on Y Mountain"}
+  ];
+
+  let currentRiddle = {};
+
+  function newRiddle() {
+    currentRiddle = riddles[Math.floor(Math.random() * riddles.length)];
+    document.getElementById("riddle").innerText = currentRiddle.q;
+    document.getElementById("answer").innerText = "";
+  }
+
+  function showAnswer() {
+    if (currentRiddle.a) {
+      document.getElementById("answer").innerText = currentRiddle.a;
+    }
+  }
+</script>
+
+</body>
+</html>
