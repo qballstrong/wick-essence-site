@@ -47,17 +47,6 @@ font-size:18px;
     border-radius: 8px;
 }
 
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background: rgba(0,0,0,0.4);
-    padding: 20px 30px;
-    border-radius: 6px;
-}
-
 .hero-text h1 {
     margin: 0;
     font-size: 36px;
