@@ -34,3 +34,36 @@ margin:auto;
 line-height:1.6;
 font-size:18px;
 }
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0,0,0,0.4);
+    padding: 20px 30px;
+    border-radius: 6px;
+}
+
+.hero-text h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.hero-text p {
+    margin-top: 8px;
+    font-size: 18px;
+}
